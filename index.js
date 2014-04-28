@@ -293,7 +293,7 @@ FMiPDevice.prototype.createSosumi = function(id, callback){
 	
 	// Initialize presence info
 	if (! idevices.hasOwnProperty(username) ){
-		idevices[username] = {"presence" : 'present'};
+		idevices[username] = {"presence" : 1};
 	}	
 	
 	// Log library errors	
@@ -332,7 +332,7 @@ FMiPDevice.prototype.createSosumi = function(id, callback){
 			
 			if( inGeoFence == false){
 			// If inGeoFence is false, we have at least 1 device that is away, so the user is away
-				idevices.username.presence = 'absent';
+				idevices.username.presence = 0;
 			}	
 		}
 	});		

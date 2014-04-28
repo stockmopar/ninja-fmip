@@ -14,6 +14,21 @@ A [Ninja Blocks](http://www.ninjablocks.com) driver to communicate with Apple's 
 
 Should be as simple as downloading the ninja-fmip in your NB drivers folder and running a npm install 
 
+```sh
+
+sudo stop ninjablock
+
+cd /opt/ninja/drivers
+
+rm -rf ninja-connectedbytcp
+git clone https://github.com/stockmopar/ninja-fmip.git
+cd ninja-fmip
+sudo npm install
+
+sudo start ninjablock
+
+```
+
 You'll also need to use / create a gist for the Beta Dashboard to access most features above. I have created a (ugly) one here: https://gist.github.com/hrshukla/7698939 which should be treated as alpha / proof of concept.
 
 ## Thanks
