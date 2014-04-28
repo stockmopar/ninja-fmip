@@ -20,7 +20,7 @@ sudo stop ninjablock
 
 cd /opt/ninja/drivers
 
-rm -rf ninja-connectedbytcp
+rm -rf ninja-fmip
 git clone https://github.com/stockmopar/ninja-fmip.git
 cd ninja-fmip
 sudo npm install
