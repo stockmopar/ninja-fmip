@@ -29,7 +29,7 @@ function driver(opts,app) {
 	this._opts.homelong = this._opts.homelong || ''; // Home Longitude
 	this._opts.radius = this._opts.radius || 500;	// Default geofence radius of 500 metres
 	this._opts.scanDelay = this._opts.scanDelay || 60 * 1000 ;	// Scan every 60 secs when asked to determine presence
-	this._opts.presence = this._opts.presence || 'unknown';		// Initial presence unknown
+	this._opts.presence = this._opts.presence || 0;		// Initial presence unknown
 
 	this._users = {};
 	
@@ -178,7 +178,7 @@ function  FMiPDevice(id, opts, app) {
 		
 		setInterval(function() {
 			if(! self.idevices.hasOwnProperty(id)){
-				var toSend = 'undetermined';
+				var toSend = '-1';
 			} else {
 				var toSend = self.idevices[id].presence ;
 			}
